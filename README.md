@@ -4,6 +4,10 @@ Test: "It will return "that's not a word" for an empty string."
 Code: pigLatin("");
 Expected Output: "that's not a word"
 
+Test: "It will return "that's not a word" for a string that contains non-alphabetical characters."
+Code: pigLatin("9!p#6:");
+Expected Output: "that's not a word"
+
 Test: "It will add 'way' to the end of words that begin with a vowel."
 Code: pigLatin("a");
 Expected Output: "away"
