@@ -1,35 +1,41 @@
 function pigLatin(text) {
     let textArray = text.split(" ");
     let pigArray = [];
-    textArray.forEach(function(text) {
-  
-    if (text.trim().length === 0) {
-    return "that's not a word";
-    }
     let vowel = ["a", "e", "i", "o", "u"];
     let cons = ["b", "c", "d", "f", "g", "h", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "y", "z"];
-    const firstChar = text.charAt(0);   
-    const secondChar = text.charAt(1);
-    const thirdChar = text.charAt(2);
+    
+    if (text.trim().length === 0) {
+      return "that's not a word";
+      }
+    
+    textArray.forEach(function(word) {
+
+    const firstChar = word.charAt(0);   
+    const secondChar = word.charAt(1);
+    const thirdChar = word.charAt(2);
     if (firstChar === "q" && secondChar === "u") {
-      text.slice(2) + text.slice(0,2) + "ay";
+      pigText = word.slice(2) + word.slice(0,2) + "ay";
     }
-    if (vowel.includes(firstChar)) {
-      text + "way";
+    else if (vowel.includes(firstChar)) {
+      pigText = word + "way";
     } 
-    if (cons.includes(thirdChar)) {
-      text.slice(3) + text.slice(0,3) + "ay";
+    else if (cons.includes(thirdChar)) {
+      pigText = word.slice(3) + word.slice(0,3) + "ay";
     }
-     if (cons.includes(secondChar)) {
-      text.slice(2) + text.slice(0,2) + "ay";
+    else if (cons.includes(secondChar)) {
+      pigText = word.slice(2) + word.slice(0,2) + "ay";
     } 
-    if (cons.includes(firstChar)) {
-      text.slice(1) + text.slice(0,1) + "ay";
+    else if (cons.includes(firstChar)) {
+      pigText = word.slice(1) + word.slice(0,1) + "ay";
     }  
-    pigArray.push(text);
+    
+    pigArray.push(pigText);
     } );
     
-    }
+  
+  return pigArray;
+
+}
            
     
 
