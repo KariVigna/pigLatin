@@ -14,11 +14,7 @@ Expected Output: "away"
 
 Test: "It will move all of the first consecutive consonants to the end and add "ay" for words beginning with consonant(s)."
 Code: pigLatin("code");
-Expected Output: "odecay"
-
-Test: "It will not treat the letter "y" as a vowel." 
-Code: pigLatin("yes");
-Expected Output: "esyay"
+Expected Output: "odecay"f
 
 Test: "If the first consonants are "qu" it will move both the "q" and the "u" to the end and add "ay"."
 Code: pigLatin("quick");
